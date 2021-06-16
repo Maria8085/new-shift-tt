@@ -1,0 +1,20 @@
+@font-face{
+    font-family: 'TenorSans';
+    src: url("./TenorSans-Regular.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal;
+}
+
+@font-face{
+    font-family: 'Inter';
+    src: url("./Inter-Regular.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal;
+}
+
+@font-face{
+    font-family: 'InterSemiBold';
+    src: url("./Inter-SemiBold.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+}
