@@ -4,25 +4,12 @@ import {
   List,
   Item,
   TitleItem,
-  WrapperBottoms,
-  ButtonList,
-  ButtonMap,
-  IconShow,
-  Icon,
-  WrapperCurrency,
-  ButtonRuble,
-  ButtonDollar,
-  ButtonEuro,
-  ResidentialComplexes,
-  Complexe,
   ShowMore,
   ResetFilters,
-  InteriorDecoration,
-  Decoration,
-  Checkbox,
 } from "./styled";
-import list from "../../images/list.svg";
-import map from "../../images/map.svg";
+import ButtonsShow from "./components/ButtonsShow/ButtonsShow";
+import ButtonsCurrency from "./components/ButtonsCurrency/ButtonsCurrency";
+import ListSidebar from "./components/ListSidebar/ListSidebar";
 
 const Sidebar = () => {
   return (
@@ -30,28 +17,11 @@ const Sidebar = () => {
       <List>
         <Item>
           <TitleItem>Отображение</TitleItem>
-          <WrapperBottoms>
-            <ButtonList>
-              <IconShow>
-                <Icon src={list} alt="список" />
-              </IconShow>
-              Список
-            </ButtonList>
-            <ButtonMap>
-              <IconShow>
-                <Icon src={map} alt="карта" />
-              </IconShow>
-              Карта
-            </ButtonMap>
-          </WrapperBottoms>
+          <ButtonsShow></ButtonsShow>
         </Item>
         <Item>
           <TitleItem>Цена</TitleItem>
-          <WrapperCurrency>
-            <ButtonRuble>₽</ButtonRuble>
-            <ButtonDollar>$</ButtonDollar>
-            <ButtonEuro>€</ButtonEuro>
-          </WrapperCurrency>
+          <ButtonsCurrency></ButtonsCurrency>
         </Item>
         <Item>
           <TitleItem>Площадь</TitleItem>
@@ -61,28 +31,43 @@ const Sidebar = () => {
         </Item>
         <Item>
           <TitleItem>Жилые комплексы</TitleItem>
-          <ResidentialComplexes>
-            <Complexe>
-              <Checkbox type="checkbox" />
-              Пироговская, 14
-            </Complexe>
-            <Complexe>Барыковские палаты</Complexe>
-            <Complexe>Европкинский, 16</Complexe>
-            <Complexe>Коробейников, 18</Complexe>
-            <Complexe>Пироговская, 14</Complexe>
-          </ResidentialComplexes>
+          <ListSidebar
+            filter={[
+              { text: "Пироговская, 14", count: "53" },
+              { text: "Барыковские палаты", count: "11" },
+              { text: "Европкинский, 16", count: "2" },
+              { text: "Коробейников, 18", count: "1" },
+              { text: "Пироговская, 14", count: "53" },
+              { text: "Crystal House", count: "12" },
+              { text: "Light House ", count: "2" },
+            ]}
+          />
           <ShowMore>Показать еще</ShowMore>
         </Item>
         <Item>
           <TitleItem>Внутренняя отделка</TitleItem>
-          <InteriorDecoration>
-            <Decoration>Whitebox</Decoration>
-            <Decoration>С отделкой</Decoration>
-            <Decoration>Без отделки</Decoration>
-          </InteriorDecoration>
+          <ListSidebar
+            filter={[
+              { text: "Whitebox", count: "3" },
+              { text: "С отделкой", count: "351" },
+              { text: "Без отделки", count: "175" },
+            ]}
+          />
         </Item>
         <Item>
           <TitleItem>Близость к метро</TitleItem>
+          <ListSidebar
+            filter={[
+              { text: "Аэропорт", count: "35" },
+              { text: "Авиамоторная", count: "1" },
+              { text: "Домодедовская", count: "4" },
+              { text: "Таганская", count: "8" },
+              { text: "Маяковская", count: "12" },
+              { text: "Чкаловская", count: "4" },
+              { text: "Динамо", count: "9" },
+            ]}
+          />
+          <ShowMore>Показать еще</ShowMore>
         </Item>
       </List>
       <ResetFilters>Сбросить фильтры</ResetFilters>
