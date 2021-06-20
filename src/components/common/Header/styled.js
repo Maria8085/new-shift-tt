@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { NavWrapper } from "../common/Navigation/styled";
-import { StyledButton } from "../ui/Button/styled";
+import { NavWrapper } from "../Navigation/styled";
+import { StyledButton } from "../../ui/Button/styled";
 
 export const Container = styled.div`
   max-width: 1440px;

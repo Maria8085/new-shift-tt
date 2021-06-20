@@ -25,9 +25,12 @@ export const List = styled.ul`
 `;
 export const Item = styled.li`
   list-style: none;
-  color: #5c5a55;
-  font-size: 14px;
   margin: 0 60px 13px 0;
+  a {
+    text-decoration: none;
+    color: #5c5a55;
+    font-size: 14px;
+  }
 `;
 export const Title = styled.h4`
   font-family: "TenorSans";

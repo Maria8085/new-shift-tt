@@ -16,12 +16,12 @@ const InputRange = ({ min, max, step, suffix }) => {
       />
       <ValueWrapper>
         <ValueLabel>
-          {value.min}
+          {value.min.toLocaleString("ru-RU")}&nbsp;
           {suffix}
         </ValueLabel>
         <span />
         <ValueLabel>
-          {value.max}
+          {value.max.toLocaleString("ru-RU")}&nbsp;
           {suffix}
         </ValueLabel>
       </ValueWrapper>

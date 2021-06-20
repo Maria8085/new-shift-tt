@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.button`
   background: #5d6993;
   cursor: pointer;
   border: 4px solid #cbcfdc;

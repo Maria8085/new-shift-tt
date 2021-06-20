@@ -13,11 +13,12 @@ export const Wrapper = styled.div`
 
 export const List = styled.ul`
   list-style-type: none;
+  border-radius: 10px;
   margin: 0;
   padding: 0;
-  top: 45px;
+  top: 52px;
   right: 0px;
-  width: 200px;
+  width: 100%;
   background-color: white;
   font-weight: bold;
   position: absolute;

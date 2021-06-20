@@ -52,7 +52,8 @@ const Card = ({
           <ItemInfo>
             Площадь:
             <span>
-              {square}m<sup>2</sup>
+              {` ${square}m`}
+              <sup>2</sup>
             </span>
           </ItemInfo>
           <ItemInfo>
@@ -64,9 +65,9 @@ const Card = ({
         </Info>
         <Separator />
         <Price>
-          <FullPrice>{price} ₽</FullPrice>
+          <FullPrice>{price.toLocaleString("ru-RU")} ₽</FullPrice>
           <PartialPrice>
-            {partial} ₽ / м<sup>2</sup>
+            {partial.toLocaleString("ru-RU")} ₽ / м<sup>2</sup>
           </PartialPrice>
         </Price>
         <Buttons>

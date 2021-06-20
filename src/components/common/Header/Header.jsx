@@ -8,11 +8,11 @@ import {
   Image,
   ActionWrapper,
 } from "./styled";
-import Logo from "../../components/ui/Logo/Logo";
-import telegram from "../../images/telegram.svg";
-import whatsapp from "../../images/whatsapp.svg";
-import Navigation from "../common/Navigation/Navigation";
-import Button from "../ui/Button/Button";
+import Logo from "../../ui/Logo/Logo";
+import telegram from "../../../images/telegram.svg";
+import whatsapp from "../../../images/whatsapp.svg";
+import Navigation from "../Navigation/Navigation";
+import Button from "../../ui/Button/Button";
 
 const Header = ({ isFooter }) => {
   return (
