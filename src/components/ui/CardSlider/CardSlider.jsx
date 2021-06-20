@@ -1,5 +1,4 @@
-// import Swiper core and required modules
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import SwiperCore, { Navigation, Pagination } from "swiper";
 
 import { SwiperSlide } from "swiper/react";
 import { Image, StyledSwiper } from "./styled";
