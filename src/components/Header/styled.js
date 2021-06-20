@@ -1,38 +1,58 @@
 import styled from "styled-components";
+import { NavWrapper } from "../common/Navigation/styled";
+import { StyledButton } from "../ui/Button/styled";
 
-export const Icon = styled.img`
-  width: 100%;
+export const Container = styled.div`
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
-export const IconWrapper = styled.a`
-  width: 172px;
-  height: 48px;
-  object-fit: cover;
-`;
+
 export const Wrapper = styled.header`
   width: 100%;
   background: #fff;
   height: 72px;
   margin-bottom: 48px;
+
+  ${(props) =>
+    props.isFooter &&
+    `
+    border-bottom: 1px solid #E3E0DA;
+    ${Container}{
+      padding: 0;
+    }
+  `}
 `;
 
-export const Container = styled.div`
-  max-width: 1440px;
-  margin: 0 auto;
-  height: 100%;
+export const Menu = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  ${NavWrapper} {
+    margin-left: 72px;
+  }
 `;
+
 export const Phone = styled.a`
   text-decoration: none;
   font-family: "TenorSans";
   color: #151513;
   font-size: 24px;
+  margin-right: 36px;
 `;
 
 export const SocialButton = styled.a`
   width: 24px;
   height: 24px;
+  margin-right: 24px;
+  cursor: pointer;
+  &:last-of-type {
+    margin-right: 0;
+  }
 `;
 
 export const Image = styled.img`
@@ -40,11 +60,10 @@ export const Image = styled.img`
   object-fit: cover;
 `;
 
-export const Order = styled.button`
-  font-family: "InterSemiBold";
-  background: #fff;
-  color: #fc620f;
-  border: 1px solid #fc620f;
-  border-radius: 32px;
-  padding: 10px 15px;
+export const ActionWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  ${StyledButton} {
+    margin-left: 36px;
+  }
 `;

@@ -1,21 +1,30 @@
 import React from "react";
-import { Wrapper, Button, IconShow } from "./styled";
+import { Wrapper, IconShow } from "./styled";
 import ListIcon from "../../../../images/list.jsx";
 import MapIcon from "../../../../images/map.jsx";
+import Button from "../../../ui/Button/Button";
 
 const ButtonsShow = () => {
   return (
     <Wrapper>
-      <Button>
-        <IconShow>
-          <ListIcon />
-        </IconShow>
+      <Button
+        dark
+        icon={
+          <IconShow>
+            <ListIcon />
+          </IconShow>
+        }
+      >
         Список
       </Button>
-      <Button>
-        <IconShow>
-          <MapIcon />
-        </IconShow>
+      <Button
+        dark
+        icon={
+          <IconShow>
+            <MapIcon />
+          </IconShow>
+        }
+      >
         Карта
       </Button>
     </Wrapper>

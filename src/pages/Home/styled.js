@@ -11,8 +11,11 @@ export const Title = styled.h2`
 `;
 
 export const WrapperContent = styled.div`
-  max-width: 1440px;
+  max-width: 1460px;
+  padding: 0 22px;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
+  align-items: flex-start;
+  margin-bottom: 80px;
 `;

@@ -2,7 +2,6 @@ import React from "react";
 import {
   Wrapper,
   WrapperImage,
-  Image,
   Description,
   Title,
   Address,
@@ -13,36 +12,66 @@ import {
   FullPrice,
   PartialPrice,
   Buttons,
-  Views,
-  Details,
+  Separator,
 } from "./styled";
-import Rectangle from "../../../../images/imageCard/Rectangle15.png";
 import Like from "../../../../images/Like";
+import Button from "../../../ui/Button/Button";
+import CardSlider from "../../../ui/CardSlider/CardSlider";
+import Complex from "../../../../images/Complex";
+import Metro from "../../../../images/Metro";
 
-const Card = ({ title }) => {
+const Card = ({
+  title,
+  complex,
+  metro,
+  square,
+  floor,
+  bedroom,
+  price,
+  partial,
+  images,
+}) => {
   return (
     <Wrapper>
       <WrapperImage>
-        <Image src={Rectangle} />
+        <CardSlider images={images} />
       </WrapperImage>
       <Description>
         <Title>{title}</Title>
         <Address>
-          <ItemAddress>RosaRossa</ItemAddress>
-          <ItemAddress>Парк Культуры</ItemAddress>
+          <ItemAddress>
+            <Complex />
+            {complex}
+          </ItemAddress>
+          <ItemAddress>
+            <Metro />
+            {metro}
+          </ItemAddress>
         </Address>
         <Info>
-          <ItemInfo>Площадь: 33m2</ItemInfo>
-          <ItemInfo>Этаж: 4</ItemInfo>
-          <ItemInfo>Спальни: 0</ItemInfo>
+          <ItemInfo>
+            Площадь:
+            <span>
+              {square}m<sup>2</sup>
+            </span>
+          </ItemInfo>
+          <ItemInfo>
+            Этаж: <span>{floor}</span>
+          </ItemInfo>
+          <ItemInfo>
+            Спальни: <span>{bedroom}</span>
+          </ItemInfo>
         </Info>
+        <Separator />
         <Price>
-          <FullPrice>29 190 000 ₽</FullPrice>
-          <PartialPrice>885 000 ₽ / м2</PartialPrice>
+          <FullPrice>{price} ₽</FullPrice>
+          <PartialPrice>
+            {partial} ₽ / м<sup>2</sup>
+          </PartialPrice>
         </Price>
         <Buttons>
-          <Views>Назначить просмотр</Views>
-          <Details>Детали</Details>
+          <Button filled>Назначить просмотр</Button>
+          <Button>Детали</Button>
         </Buttons>
       </Description>
       <Like />

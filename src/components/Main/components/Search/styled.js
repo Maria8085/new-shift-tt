@@ -2,13 +2,14 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   position: relative;
+  display: inline-block;
   height: 48px;
-  max-width: 627px;
-  width: 100%;
+  flex-grow: 1;
+  width: auto;
 `;
 
 export const Input = styled.input`
-  width: 90%;
+  width: 100%;
   height: 48px;
   padding-left: 55px;
   border-radius: 42px;

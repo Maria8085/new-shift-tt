@@ -6,7 +6,7 @@ const Search = () => {
   return (
     <Wrapper>
       <Input type="text" placeholder="Комплекс, улица, район или метро" />
-      <Button type="submit">
+      <Button type="submit" aria-label="Поиск">
         <IconSearch />
       </Button>
     </Wrapper>

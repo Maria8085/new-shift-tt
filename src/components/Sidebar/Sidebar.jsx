@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Wrapper,
   List,
@@ -10,24 +10,43 @@ import {
 import ButtonsShow from "./components/ButtonsShow/ButtonsShow";
 import ButtonsCurrency from "./components/ButtonsCurrency/ButtonsCurrency";
 import ListSidebar from "./components/ListSidebar/ListSidebar";
+import InputRange from "../ui/InputRange/InputRange";
 
 const Sidebar = () => {
+  const [countComplex, setCountComplex] = useState(5);
+  const [countMetro, setCountMetro] = useState(3);
+  const reset = () => {
+    setCountComplex(3);
+    setCountMetro(3);
+  };
   return (
     <Wrapper>
       <List>
         <Item>
           <TitleItem>Отображение</TitleItem>
-          <ButtonsShow></ButtonsShow>
+          <ButtonsShow />
         </Item>
         <Item>
           <TitleItem>Цена</TitleItem>
           <ButtonsCurrency></ButtonsCurrency>
+          <InputRange min={0} max={120000000} suffix={"₽"} step={100000} />
         </Item>
         <Item>
           <TitleItem>Площадь</TitleItem>
+          <InputRange
+            min={0}
+            max={1000}
+            suffix={
+              <>
+                m<sup>2</sup>
+              </>
+            }
+            step={10}
+          />
         </Item>
         <Item>
           <TitleItem>Количество спален</TitleItem>
+          <InputRange min={0} max={15} suffix={""} step={1} />
         </Item>
         <Item>
           <TitleItem>Жилые комплексы</TitleItem>
@@ -40,9 +59,15 @@ const Sidebar = () => {
               { text: "Пироговская, 14", count: "53" },
               { text: "Crystal House", count: "12" },
               { text: "Light House ", count: "2" },
-            ]}
+            ].slice(0, countComplex)}
           />
-          <ShowMore>Показать еще</ShowMore>
+          <ShowMore
+            onClick={() => {
+              setCountComplex(countComplex + 1);
+            }}
+          >
+            Показать еще
+          </ShowMore>
         </Item>
         <Item>
           <TitleItem>Внутренняя отделка</TitleItem>
@@ -65,12 +90,20 @@ const Sidebar = () => {
               { text: "Маяковская", count: "12" },
               { text: "Чкаловская", count: "4" },
               { text: "Динамо", count: "9" },
-            ]}
+            ].slice(0, countMetro)}
           />
-          <ShowMore>Показать еще</ShowMore>
+          <ShowMore
+            onClick={() => {
+              setCountMetro(countMetro + 1);
+            }}
+          >
+            Показать еще
+          </ShowMore>
         </Item>
       </List>
-      <ResetFilters>Сбросить фильтры</ResetFilters>
+      <ResetFilters dark onClick={reset}>
+        Сбросить фильтры
+      </ResetFilters>
     </Wrapper>
   );
 };

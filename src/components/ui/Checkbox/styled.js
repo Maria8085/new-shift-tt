@@ -3,6 +3,7 @@ import check from "../../../images/check.svg";
 
 export const Label = styled.label`
   display: flex;
+  cursor: pointer;
 `;
 
 export const Text = styled.span`

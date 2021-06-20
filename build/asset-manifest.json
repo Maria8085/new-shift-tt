@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d49ccb8a.chunk.css",
+    "main.js": "/static/js/main.c3a314ed.chunk.js",
+    "main.js.map": "/static/js/main.c3a314ed.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f4865685.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f4865685.js.map",
+    "static/css/2.3b877d4b.chunk.css": "/static/css/2.3b877d4b.chunk.css",
+    "static/js/2.af72378b.chunk.js": "/static/js/2.af72378b.chunk.js",
+    "static/js/2.af72378b.chunk.js.map": "/static/js/2.af72378b.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.3b877d4b.chunk.css.map": "/static/css/2.3b877d4b.chunk.css.map",
+    "static/css/main.d49ccb8a.chunk.css.map": "/static/css/main.d49ccb8a.chunk.css.map",
+    "static/js/2.af72378b.chunk.js.LICENSE.txt": "/static/js/2.af72378b.chunk.js.LICENSE.txt",
+    "static/media/Arrow.bff6ccbc.svg": "/static/media/Arrow.bff6ccbc.svg",
+    "static/media/Art-Estate.32dd2f66.svg": "/static/media/Art-Estate.32dd2f66.svg",
+    "static/media/fonts.css": "/static/media/TenorSans-Regular.a98abf4c.ttf",
+    "static/media/check.81027384.svg": "/static/media/check.81027384.svg",
+    "static/media/img0.2846e660.png": "/static/media/img0.2846e660.png",
+    "static/media/img1.98ee82c7.png": "/static/media/img1.98ee82c7.png",
+    "static/media/img2.06b593e9.png": "/static/media/img2.06b593e9.png",
+    "static/media/img3.684a5389.png": "/static/media/img3.684a5389.png",
+    "static/media/telegram.37ed93c9.svg": "/static/media/telegram.37ed93c9.svg",
+    "static/media/whatsapp.a1e7eaf0.svg": "/static/media/whatsapp.a1e7eaf0.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f4865685.js",
+    "static/css/2.3b877d4b.chunk.css",
+    "static/js/2.af72378b.chunk.js",
+    "static/css/main.d49ccb8a.chunk.css",
+    "static/js/main.c3a314ed.chunk.js"
+  ]
+}

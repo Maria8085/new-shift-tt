@@ -2,34 +2,36 @@ import React from "react";
 import {
   Wrapper,
   Container,
-  IconWrapper,
-  Icon,
+  Menu,
   Phone,
   SocialButton,
   Image,
-  Order,
+  ActionWrapper,
 } from "./styled";
-import logo from "../../images/Art-Estate.svg";
+import Logo from "../../components/ui/Logo/Logo";
 import telegram from "../../images/telegram.svg";
 import whatsapp from "../../images/whatsapp.svg";
-import Navigation from "../Navigation/Navigation";
+import Navigation from "../common/Navigation/Navigation";
+import Button from "../ui/Button/Button";
 
-const Header = () => {
+const Header = ({ isFooter }) => {
   return (
-    <Wrapper>
+    <Wrapper isFooter={isFooter} as={isFooter && "footer"}>
       <Container>
-        <IconWrapper href="#" aria-label="Главная">
-          <Icon src={logo} alt="Логотип Art-Estate" />
-        </IconWrapper>
-        <Navigation />
-        <Phone href="+7 (812) 501-1000">+7 (812) 501-1000</Phone>
-        <SocialButton>
-          <Image src={telegram} alt="телеграмм" />
-        </SocialButton>
-        <SocialButton>
-          <Image src={whatsapp} alt="ватсап" />
-        </SocialButton>
-        <Order>Заказать звонок</Order>
+        <Menu>
+          <Logo />
+          <Navigation />
+        </Menu>
+        <ActionWrapper>
+          {!isFooter && <Phone href="tel:78125011000">+7 (812) 501-1000</Phone>}
+          <SocialButton href="#" aria-label="телеграмм">
+            <Image src={telegram} alt="телеграмм" />
+          </SocialButton>
+          <SocialButton href="#" aria-label="телеграмм">
+            <Image src={whatsapp} alt="ватсап" />
+          </SocialButton>
+          {!isFooter && <Button>Заказать звонок</Button>}
+        </ActionWrapper>
       </Container>
     </Wrapper>
   );

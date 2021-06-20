@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import Button from "../ui/Button/Button";
 
-export const Wrapper = styled.div`
-  width: 330px;
+export const Wrapper = styled.aside`
+  flex: 0 0 330px;
   background: #343c59;
   border-radius: 24px;
   padding: 0 24px;
@@ -17,7 +18,7 @@ export const Item = styled.li`
   list-style: none;
   font-family: "Inter";
   font-size: 16px;
-  padding: 24px 0;
+  padding: 26px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 `;
 
@@ -30,6 +31,7 @@ export const TitleItem = styled.h6`
 
 export const ShowMore = styled.button`
   border: none;
+  cursor: pointer;
   background: transparent;
   color: #fc620f;
   font-family: "Inter";
@@ -39,15 +41,13 @@ export const ShowMore = styled.button`
   font-weight: 600;
 `;
 
-export const ResetFilters = styled.button`
+export const ResetFilters = styled(Button)`
   width: 100%;
   padding: 12px 0;
   margin: 24px 0;
   color: rgba(255, 255, 255, 0.7);
-  background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.7);
-  font-family: "Inter";
   font-weight: 600;
   font-size: 14px;
-  border-radius: 32px;
+  justify-content: center;
 `;
